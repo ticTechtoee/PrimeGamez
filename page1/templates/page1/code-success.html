@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Status</title>
+
+</head>
+<body>
+    {% if otp_correct.is_otp_correct == True %}
+    <p>Payment Was Successfull</p>
+    {% else %}
+    <p>OTP was wrong</p><a href="{% url 'page1:authenticate-text' otp_correct.id %}">Kindly Enter the Code Again</a>
+    {% endif %}
+</body>
+</html>

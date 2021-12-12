@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DS Page</title>
+    <style>
+        #button {
+            border-radius: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 300;
+            font-size: medium;
+            width: 150px;
+            height: 40px;
+
+            margin-top: 20px;
+            margin-left: 60px;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <img style=" margin-left: 90px;height: 60px; width: 120px;" src="/static/assets/logo.png" />
+    <br>
+    <img style=" margin-left: 90px;height: 60px; width: 120px;" src="/static/assets/card.jpg" />
+          
+<h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: 700;">Authorize This Payment</h3>
+<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: 300;">To Confirm this Payment to PrimeGamez,</br> we need to send you a one time passcode by text message</p>
+<form action="" method="post">
+    {% csrf_token %}
+<button id="button" type="submit" name="text_message_button" value="Text Message">Send Text</button>
+<!--<br>
+<button type="submit" name="app_button" value="App">App</button> -->
+</form>
+</body>
+</html>

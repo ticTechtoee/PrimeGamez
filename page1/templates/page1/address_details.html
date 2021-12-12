@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Details</title>
+    <style>
+        .input {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 300;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-left: 20px;
+            width: 200px;
+            height: 100px;
+            
+        }
+
+        #button {
+            border-radius: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 300;
+            font-size: medium;
+            width: 150px;
+            height: 40px;
+
+            margin-top: 20px;
+            margin-left: 40px;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+        .p_tag {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            font-weight: 500;
+
+        }
+    </style>
+</head>
+<body>
+    <img style=" margin-left: 70px;height: 60px; width: 120px;" src="/static/assets/logo.png" />
+        <p style=" margin-left: 70px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 500; font-size: x-large">Payment Link</p>
+    <p class="p_tag">Please Enter your Biling address in the following format</br>(1st & 2nd line of address, city and postcode)</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        <input class="input" type="text" name="address_details">
+        <br>
+        <input id="button" type="submit" value="Pay Now" />
+    </form>
+</body>
+</html>

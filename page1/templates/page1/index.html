@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page1</title>
+    <style>
+        .box {
+
+            position: absolute;
+
+            top: 10%;
+            width: auto;
+            height: auto;
+
+        }
+
+        #button {
+            border-radius: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 300;
+            font-size: medium;
+            width: 150px;
+            height: 40px;
+
+            margin-top: 20px;
+            margin-left: 100px;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+
+        .label {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+
+        }
+
+        .input {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 300;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        #input2 {
+            margin-left: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>
+        <img style=" margin-left: 90px;height: 60px; width: 120px;" src="/static/assets/logo.png" />
+        <p style=" margin-left: 70px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 500; font-size: x-large;">Payment Link</p>
+    </div>
+        <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: 400;">Thank you for your Recent Order</h3>
+        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: 300;">To Pay for Your Order and for us to begin processing it please begin by entring your order number and post code</p>
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <label class="label" for="order_number">Order Number:</label>
+            <input class="input" type="text" name="order_number" />
+            <br>
+            <label class="label" for="post_code">Postcode:</label>
+            <input id="input2" class="input" type="text" name="post_code" />
+            <br>
+            <input id="button" type="submit" value="Next" />
+
+        </form>
+    </div>
+</body>
+
+</html>
