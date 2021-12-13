@@ -5,33 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3DS Page</title>
-    <style>
-        #button {
-            border-radius: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 300;
-            font-size: medium;
-            width: 150px;
-            height: 40px;
-
-            margin-top: 20px;
-            margin-left: 60px;
-            color: white;
-            background-color: black;
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/assets/custom_css/card_details.css">
 </head>
 <body>
-    <img style=" margin-left: 90px;height: 60px; width: 120px;" src="/static/assets/logo.png" />
-    <br>
-    <img style=" margin-left: 90px;height: 60px; width: 120px;" src="/static/assets/card.jpg" />
-          
-<h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: 700;">Authorize This Payment</h3>
-<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: 300;">To Confirm this Payment to PrimeGamez,</br> we need to send you a one time passcode by text message</p>
-<form action="" method="post">
-    {% csrf_token %}
-<button id="button" type="submit" name="text_message_button" value="Text Message">Send Text</button>
+   
+    <div class="main">
+        <div id="logo-bar">
+            <img id="img" src="/static/assets/imgs/logo.png">
+            <p> - 3DS Verification</p>
+
+        </div>
+        <hr class="h-line">
+   
+        <div class="inner">
+            <form action="" method="post">
+                {% csrf_token %}
+            <h2>To verify your payment of £ {{ order_amount.amount }} to PrimeGamez, please choose from the following options:</h2>
+            <button class="btn" name="App" type="submit">App</button>
+            <button class="btn" name="Text" type="submit">Text</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- 
+<button id="button" type="submit" name="text_message_button" value="Text Message">Send Text</button> -->
 <!--<br>
 <button type="submit" name="app_button" value="App">App</button> -->
 </form>

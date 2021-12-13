@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="/static/assets/custom_css/card_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    {{ address_id }}
+    <div class="main">
+        <div id="logo-bar">
+            <img id="img" src="/static/assets/imgs/logo.png">
+            <p> - Payment Link</p>
+
+        </div>
+
+        <hr class="h-line">
+
+        <div class="inner-ver">
+            <h3 class="p_tag">Sorry the Card Details didn't matched</h3>
+           <h3>Click <a href="{% url 'page1:card-details' card_id.id %}">here </a>to go back</h3>
+          
+        </div>
+    </div>
+</body>
+</html>

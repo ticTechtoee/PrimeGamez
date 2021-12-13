@@ -5,50 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Details</title>
-    <style>
-        .input {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 300;
-            border-radius: 20px;
-            margin-top: 10px;
-            margin-left: 20px;
-            width: 200px;
-            height: 100px;
-            
-        }
+    <link rel="stylesheet" href="/static/assets/custom_css/card_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        #button {
-            border-radius: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 300;
-            font-size: medium;
-            width: 150px;
-            height: 40px;
-
-            margin-top: 20px;
-            margin-left: 40px;
-            color: white;
-            background-color: black;
-            border: none;
-        }
-        .p_tag {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: medium;
-            font-weight: 500;
-
-        }
-    </style>
+    
 </head>
 <body>
-    <img style=" margin-left: 70px;height: 60px; width: 120px;" src="/static/assets/logo.png" />
-        <p style=" margin-left: 70px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 500; font-size: x-large">Payment Link</p>
-    <p class="p_tag">Please Enter your Biling address in the following format</br>(1st & 2nd line of address, city and postcode)</p>
-    <form action="" method="post">
+    <div class="main">
+        <div id="logo-bar">
+            <img id="img" src="/static/assets/imgs/logo.png">
+            <p> - Payment Link</p>
+
+        </div>
+        <hr class="h-line">
+        
+
+
+        
+        <div class="inner">
+        <h4>Order: {{ order.orderNumber }}</h4>
+        
+
+            <div class="row">
+                <div class="col-75">
+                    <div class="container">
+                        <form action="" method="post">
+                            {% csrf_token %}
+
+                            <div class="col-50">
+                                <div class="col-50">
+                                    <h3>Please enter your Billing Address</h3>
+                                    
+                                    <label for="cname">Address</label>
+                                    <input type="text" id="cname" name="main_address">
+                                    <label for="ccnum">Apt, Suite etc (Optional)</label>
+                                    <input type="text" id="ccnum" name="apt_suite">
+
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">City</label>
+                                            <input type="text" id="expyear" name="city">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">Country</label>
+                                            <input type="text" id="cvv" name="country">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <input type="submit" value="Pay: £ {{ order.amount }}" class="btn">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <form action="" method="post">
         {% csrf_token %}
         
         <input class="input" type="text" name="address_details">
         <br>
         <input id="button" type="submit" value="Pay Now" />
-    </form>
+    </form> -->
 </body>
 </html>

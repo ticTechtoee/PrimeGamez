@@ -15,9 +15,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&4geb#g8+wx0i^!!6d%6c@3v81ihr_3l(yy)h36zkv2!gz-js^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.primegamez.co.uk']
+#ALLOWED_HOSTS = ['www.primegamez.co.uk']
+ALLOWED_HOSTS = []
 
 
 # Application definition
