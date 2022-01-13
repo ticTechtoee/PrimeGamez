@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Declined</title>
+    <link rel="stylesheet" href="/static/assets/custom_css/card_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="main">
+        <div id="logo-bar">
+            <img id="img" src="/static/assets/imgs/logo.png">
+            <p> - Payment Decline</p>
+
+        </div>
+        <hr class="h-line">
+   
+        <div class="inner-special">
+            <img style="height: 10%; width: 10%;" src="/static/assets/imgs/cross.png">
+           
+        </div>
+        <div class="inner">
+            <h3>Your card has been declined, this could be 
+                due to your card security. Please either call 
+                your card provider to unblock any holds or try 
+                again with an alternative payment method.</h3>
+            <form action="" method="post">
+                {% csrf_token %}
+                <button class="btn" type="submit">Try Again</button>
+            </form>
+        </div>
+</body>
+</html>

