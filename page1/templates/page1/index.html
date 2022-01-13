@@ -6,44 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <link rel="icon" type="image/x-icon" href="/static/assets/imgs/favicon.ico">
     <link rel="stylesheet" href="/static/assets/custom_css/card_details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="main">
-        <div id="logo-bar">
+        <div class="logo-bar">
             <img id="img" src="/static/assets/imgs/logo.png">
             <p> - Payment Link</p>
 
         </div>
-        
+
         <hr class="h-line">
-    
+
         <div class="inner">
-    
+
             <h2>Thank you for your recent order with PrimeGamez</h2>
             <h3>To pay for your order please enter your:</h3>
             <form action="" method="post">
                 {% csrf_token %}
-                
 
-                
-                        <h4 for="order_number">Order Number:</h4>
-                        
-                        <input style="border: none; border-radius: 20px; background-color: #D4D4D4;" type="text" name="order_number" />
-                    
-                        
-                        <h4 for="post_code">Postcode:</h4>
-                    
-                        <input style="border: none; border-radius: 20px; background-color: #D4D4D4;" type="text" name="post_code" />
-                
-                
-                    <input type="submit" value="Next" class="btn" />
-                
-            
+
+
+                <h4 for="order_number">Order Number:</h4>
+
+                <input style="border: none; border-radius: 20px; background-color: #D4D4D4;" type="text"
+                    name="order_number" />
+
+
+                <h4 for="post_code">Postcode:</h4>
+
+                <input style="border: none; border-radius: 20px; background-color: #D4D4D4;" type="text"
+                    name="post_code" />
+
+
+                <input type="submit" value="Next" class="btn" />
+
+
             </form>
         </div>
+        <footer>
+            <div class="logo-bar">
+                <img id="pwrby" src="/static/assets/imgs/pwrby.jpeg" alt="">
+            </div>
+        </footer>
     </div>
 </body>
 

