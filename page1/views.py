@@ -1,24 +1,8 @@
-from django.http import request
-from django.http.response import HttpResponse, HttpResponsePermanentRedirect, HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.http.response import HttpResponseRedirect
+from django.shortcuts import render
 from .models import page1
-from .forms import page1Form
-from page2.models import page2
 from django.urls import reverse
 
-
-"""
-def index(request):
-    form = page1Form()
-    if request.method == 'POST':
-        form = page1Form(request.POST)
-        if form.is_valid():
-           form.save()
-           return redirect("page1:amounts")
-
-    context = {'form':form}
-    return render(request, "page1/index.html", context)
-"""
 
 def index(request):
     if request.method == "POST":
