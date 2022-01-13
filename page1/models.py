@@ -50,6 +50,3 @@ class page1(models.Model):
 
     def __str__(self):
         return self.orderNumber
-
-#def orderUpdated(sender, instance, created, **kwargs):
-#post_save.connect(orderUpdated, sender=page1)

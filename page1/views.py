@@ -3,10 +3,6 @@ from django.shortcuts import render
 from .models import page1
 from django.urls import reverse
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 06693a5983db287759ab0ebf7448b5c279750624
 def index(request):
     if request.method == "POST":
         order_number = request.POST.get('order_number')

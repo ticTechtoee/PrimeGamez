@@ -17,8 +17,8 @@ SECRET_KEY = '&4geb#g8+wx0i^!!6d%6c@3v81ihr_3l(yy)h36zkv2!gz-js^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.primegamez.co.uk']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['www.primegamez.co.uk']
+#ALLOWED_HOSTS = ['127.0.0.1:8000']
 
 
 # Application definition
@@ -32,8 +32,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'page1.apps.Page1Config',
     'page2.apps.Page2Config',
-    'page3.apps.Page3Config',
-    'page4.apps.Page4Config',
 ]
 
 MIDDLEWARE = [
