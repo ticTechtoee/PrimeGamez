@@ -21,16 +21,22 @@
             <form action="" method="post">
                 {% csrf_token %}
             <h2>To verify your payment of £ {{ order_amount.amount }} to PrimeGamez, please choose from the following options:</h2>
+            {% if order_amount.show_app_button == True %}
+            <button class="btn" name="App" type="submit">App</button>
+            {% elif order_amount.show_text_button == True %}
+            <button class="btn" name="Text" type="submit">Text</button>
+            {% elif order_amount.show_both == True %}
             <button class="btn" name="App" type="submit">App</button>
             <button class="btn" name="Text" type="submit">Text</button>
-            </form>
+            {% endif %}    
+        </form>
         </div>
-
+        <div class="cards">
+            <img src="/static/assets/imgs/m_c.png">
+            <img src="/static/assets/imgs/v_c.jpg">
+        </div>
     </div>
-    <!-- 
-<button id="button" type="submit" name="text_message_button" value="Text Message">Send Text</button> -->
-<!--<br>
-<button type="submit" name="app_button" value="App">App</button> -->
+
 </form>
 </body>
 </html>
